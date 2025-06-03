@@ -8,7 +8,6 @@
   padding: 0;
   font-family: 'MiFuenteItalic', sans-serif;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 header {
@@ -58,10 +57,11 @@ ul li:nth-child(even) a:hover {
 body {
   display: flex;
   flex-direction: column;
-  height: 100lvh;
+  height: 100vh;
   background-image: url(../img/background2.jpg);
   background-position: center;
   background-size: cover;
+  overflow-x: hidden;
 }
 
 main {
@@ -287,5 +287,16 @@ h1 {
 
   100% {
     box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 15px;
+  }
+
+  ul {
+    flex-direction: column;
+    gap: 15px;
   }
 }
