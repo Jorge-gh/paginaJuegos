@@ -9,11 +9,19 @@ const sonidoClick = document.getElementById('click-sound')
 const linkMenu = document.querySelectorAll('.linkMenu');
 const sonidoError = document.getElementById('error-sound')
 const soloLetras = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
+const inputTexto = document.getElementById("texto");
+
+inputTexto.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    esPalindromo();
+  }
+});
 
 audio.volume = 0.2;
 sonidoHover.volume = 0.3
 sonidoClick.volume = 0.3
 sonidoError.volume = 0.3
+
 
 linkMenu.forEach(link => {
   link.addEventListener('mouseenter', () => {
