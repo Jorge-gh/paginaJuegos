@@ -12,33 +12,28 @@
 
 header {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
   width: 100%;
   background-color: #111111;
-  padding: 20px;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 10px 20px;
+  padding: 30px;
 }
 
 ul {
-  display: inline-flex;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
   width: 100%;
-  justify-content: space-between;
+  text-align: center;
   list-style: none;
+  gap: 10px;
 }
 
 ul li a {
-  display: inline-block;
-  padding: 5px;
+  display: flex;
   color: white;
   text-decoration: none;
-  font-size: 20px;
+  font-size: clamp(14px, 2vw, 22px);
   font-weight: 600;
   transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -65,7 +60,7 @@ body {
   height: 100lvh;
   background-image: url(../img/background2.jpg);
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
 }
 
 main {
@@ -77,6 +72,7 @@ main {
   justify-content: center;
   flex-direction: column;
   gap: 20px;
+  padding: 20px;
 }
 
 /* FIN */
@@ -85,27 +81,29 @@ h1 {
   color: rgb(0, 0, 0);
   text-transform: uppercase;
   backdrop-filter: blur(5px);
-  font-size: 60px;
+  font-size: clamp(24px, 6vw, 60px);
   padding: 10px;
   border-radius: 20px;
+  text-align: center;
 }
 
 .divInput {
   background-color: white;
-  padding: 20px;
-  border-radius: 20px;
-  width: 30%;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
   display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  box-shadow: 0 1px 6px rgba(32, 33, 36, .4);
+  justify-content: center;
 }
 
 .divInput input {
   border: none;
-  font-size: 16px;
-  flex-grow: 1;
+  font-size: clamp(14px, 2.5vw, 16px); /* se ajusta al ancho de la pantalla */
+  flex: 1 1 auto;                      /* se adapta al espacio disponible */
   font-weight: 100;
+  padding: 10px;
+  min-width: 0;                        /* evita que se rompa el layout */
 }
 
 .divInput input::placeholder {
@@ -124,10 +122,11 @@ h1 {
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 10px;
-  width: 25%;
+  font-size: clamp(12px, 2vw, 14px);  /* también responsive */
   border-radius: 8px;
   cursor: pointer;
-  transition: background .3s ease-in-out, color .3s ease-in-out;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  flex: 0 0 auto;/* evita que se estire raro */
 }
 
 .divInput button:hover {
