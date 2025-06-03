@@ -8,6 +8,7 @@
   padding: 0;
   font-family: 'MiFuenteItalic', sans-serif;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 header {
@@ -99,11 +100,14 @@ h1 {
 
 .divInput input {
   border: none;
-  font-size: clamp(14px, 2.5vw, 16px); /* se ajusta al ancho de la pantalla */
-  flex: 1 1 auto;                      /* se adapta al espacio disponible */
+  font-size: clamp(14px, 2.5vw, 16px);
+  /* se ajusta al ancho de la pantalla */
+  flex: 1 1 auto;
+  /* se adapta al espacio disponible */
   font-weight: 100;
   padding: 10px;
-  min-width: 0;                        /* evita que se rompa el layout */
+  min-width: 0;
+  /* evita que se rompa el layout */
 }
 
 .divInput input::placeholder {
@@ -122,11 +126,13 @@ h1 {
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 10px;
-  font-size: clamp(12px, 2vw, 14px);  /* también responsive */
+  font-size: clamp(12px, 2vw, 14px);
+  /* también responsive */
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-  flex: 0 0 auto;/* evita que se estire raro */
+  flex: 0 0 auto;
+  /* evita que se estire raro */
 }
 
 .divInput button:hover {
