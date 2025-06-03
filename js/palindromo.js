@@ -18,6 +18,8 @@ form.addEventListener("submit", (event) => {
   esPalindromo();
 });
 
+
+
 audio.volume = 0.2;
 sonidoHover.volume = 0.3
 sonidoClick.volume = 0.3
@@ -35,6 +37,14 @@ btnEnviar.addEventListener('mouseenter', () => {
   sonidoHover.currentTime = 0;
   sonidoHover.play();
 });
+
+function ajustarAltura() {
+  document.body.style.height = window.innerHeight + 'px';
+}
+
+window.addEventListener('resize', ajustarAltura);
+window.addEventListener('orientationchange', ajustarAltura);
+ajustarAltura();
 
 function spinTarjeta() {
   cardInner.classList.remove("spin");
