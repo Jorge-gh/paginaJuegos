@@ -39,6 +39,14 @@ ul li a {
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
+ul li a,
+ul li a:visited,
+ul li a:active,
+ul li a:focus {
+  color: white;
+  text-decoration: none;
+}
+
 ul li:nth-child(odd) a:hover {
   font-weight: bold;
   background: linear-gradient(90deg, #ff0000, #ff9900);
