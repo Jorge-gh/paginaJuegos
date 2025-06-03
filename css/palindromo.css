@@ -29,10 +29,6 @@ ul {
   gap: 10px;
 }
 
-ul li {
-  text-align: center;
-}
-
 ul li a {
   display: block;
   width: 100%;
