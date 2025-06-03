@@ -66,13 +66,19 @@ ul li:nth-child(even) a:hover {
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100svh;
   overflow-x: hidden;
-  overflow-y: hidden;
   background-image: url(../img/background2.jpg);
   background-position: center;
   background-size: cover;
   overflow-x: hidden;
+}
+
+body::after {
+  content: "";
+  display: block;
+  height: 5px;
+  background: red;
 }
 
 main {
