@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/palindromo.css">
+  <title>Es Palindromo</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li class="linkMenu"><a href="../index.html">Home</a></li>
+        <li class="linkMenu"><a href="./hangman.html">Hangman</a></li>
+        <li class="linkMenu"><a href="./ppt.html">Piedra|Papel|Tijeras</a></li>
+        <li class="linkMenu"><a href="./vocales.html">Vocales</a></li>
+        <li class="linkMenu"><a href="./palindromo.html">Palindromo</a></li>
+        <li class="linkMenu"><a href="./fizzbuzz.html">FizzBuzz</a></li>
+        <li class="linkMenu"><a href="./fibonacci.html">Fibonacci</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1 id="result">Es Palindromo?</h1>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="front"></div>
+        <div class="back"></div>
+      </div>
+    </div>
+
+    <div class="divInput">
+      <input type="text" placeholder="Escribe una palabra" id="texto">
+      <button id="btnEnviar" onclick="esPalindromo()">Listo</button>
+    </div>
+  </main>
+
+  <audio autoplay loop hidden id="bg-music">
+    <source src="../audio/bgAshes.mp3" type="audio/mpeg">
+  </audio>
+  <audio hidden id="hover-sound">
+    <source src="../audio/hoverSound.wav" type="audio/wav" preload="auto">
+    </source>
+  </audio>
+  <audio hidden id="click-sound">
+    <source src="../audio/selectSound.wav" type="audio/wav" preload="auto">
+    </source>
+  </audio>
+  <audio hidden id="error-sound">
+    <source src="../audio/clickError.wav" type="audio/wav" preload="auto">
+    </source>
+  </audio>
+</body>
+<script src="../js/palindromo.js"></script>
+
+</html>
