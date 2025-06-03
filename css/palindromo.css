@@ -37,10 +37,10 @@ ul li {
 ul li a {
   display: block;
   width: 100%;
-  padding: 8px;
   font-size: clamp(12px, 3vw, 18px);
   justify-content: center;
   color: white;
+  text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
