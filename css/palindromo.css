@@ -29,12 +29,18 @@ ul {
   gap: 10px;
 }
 
+ul li {
+  flex: 1 1 auto;
+  max-width: 150px;
+  text-align: center;
+}
+
 ul li a {
-  display: flex;
-  color: white;
-  text-decoration: none;
-  font-size: clamp(14px, 2vw, 22px);
-  font-weight: 600;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  font-size: clamp(12px, 3vw, 18px);
+  justify-content: center;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
