@@ -11,10 +11,11 @@ const sonidoError = document.getElementById('error-sound')
 const soloLetras = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
 const inputTexto = document.getElementById("texto");
 
-inputTexto.addEventListener("keydown", (event) => {
-  if (event.key === "Enter") {
-    esPalindromo();
-  }
+const form = document.getElementById("formPalindromo");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  esPalindromo();
 });
 
 audio.volume = 0.2;

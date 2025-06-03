@@ -10,15 +10,15 @@
 
 <body>
   <header>
-      <ul>
-        <li class="linkMenu"><a href="../index.html">Home</a></li>
-        <li class="linkMenu"><a href="./hangman.html">Hangman</a></li>
-        <li class="linkMenu"><a href="./ppt.html">Piedra|Papel|Tijeras</a></li>
-        <li class="linkMenu"><a href="./vocales.html">Vocales</a></li>
-        <li class="linkMenu"><a href="./palindromo.html">Palindromo</a></li>
-        <li class="linkMenu"><a href="./fizzbuzz.html">FizzBuzz</a></li>
-        <li class="linkMenu"><a href="./fibonacci.html">Fibonacci</a></li>
-      </ul>
+    <ul>
+      <li class="linkMenu"><a href="../index.html">Home</a></li>
+      <li class="linkMenu"><a href="./hangman.html">Hangman</a></li>
+      <li class="linkMenu"><a href="./ppt.html">Piedra|Papel|Tijeras</a></li>
+      <li class="linkMenu"><a href="./vocales.html">Vocales</a></li>
+      <li class="linkMenu"><a href="./palindromo.html">Palindromo</a></li>
+      <li class="linkMenu"><a href="./fizzbuzz.html">FizzBuzz</a></li>
+      <li class="linkMenu"><a href="./fibonacci.html">Fibonacci</a></li>
+    </ul>
   </header>
   <main>
     <h1 id="result">Es Palindromo?</h1>
@@ -30,27 +30,28 @@
       </div>
     </div>
 
-    <div class="divInput">
-      <input type="text" placeholder="Escribe una palabra" id="texto">
-      <button id="btnEnviar" onclick="esPalindromo()">Listo</button>
-    </div>
-  </main>
+    <form id="formPalindromo" onsubmit="return false;">
+      <div class="divInput">
+        <input id="texto" type="text" placeholder="Escribe algo..." />
+        <button id="btnEnviar" type="submit">Verificar</button>
+      </div>
+    </form>
 
-  <audio autoplay loop hidden id="bg-music">
-    <source src="../audio/bgAshes.mp3" type="audio/mpeg">
-  </audio>
-  <audio hidden id="hover-sound">
-    <source src="../audio/hoverSound.wav" type="audio/wav" preload="auto">
-    </source>
-  </audio>
-  <audio hidden id="click-sound">
-    <source src="../audio/selectSound.wav" type="audio/wav" preload="auto">
-    </source>
-  </audio>
-  <audio hidden id="error-sound">
-    <source src="../audio/clickError.wav" type="audio/wav" preload="auto">
-    </source>
-  </audio>
+    <audio autoplay loop hidden id="bg-music">
+      <source src="../audio/bgAshes.mp3" type="audio/mpeg">
+    </audio>
+    <audio hidden id="hover-sound">
+      <source src="../audio/hoverSound.wav" type="audio/wav" preload="auto">
+      </source>
+    </audio>
+    <audio hidden id="click-sound">
+      <source src="../audio/selectSound.wav" type="audio/wav" preload="auto">
+      </source>
+    </audio>
+    <audio hidden id="error-sound">
+      <source src="../audio/clickError.wav" type="audio/wav" preload="auto">
+      </source>
+    </audio>
 </body>
 <script src="../js/palindromo.js"></script>
 
